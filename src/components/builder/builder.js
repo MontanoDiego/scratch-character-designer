@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './builder.css';
 
 
@@ -7,12 +7,17 @@ export default function Builder({ setWeapon, weapon, setArmor, armor, ally, setA
   // weapons selector options list (option name, then value)
   const weapons = ['Gargoyles Great Axe', 'Great Sword', 'Winged Scythe'];
   const weaponsValue = ['greataxe', 'greatsword', 'scythe'];
+
   // armor selector options list (option name, then value)
   const armors = ['Night\'s Calvary Armor', 'Albinauric Armor', 'Blaidd\'s Armor'];
   const armorsValue = ['night', 'albi', 'blaidd'];
+
   // ally selector options list (option name, then value)
   const allies = ['Mimic Tear', 'Ancestral Follower', 'Spirit Jellyfish'];
   const alliesValue = ['mimic', 'ancestor', 'jelly'];
+
+  // sets input value for submit
+  const [inputValue, setInputValue] = useState('');
   
   const handleWeaponSelect = (e) => {
     setWeapon(e.target.value);
@@ -27,6 +32,15 @@ export default function Builder({ setWeapon, weapon, setArmor, armor, ally, setA
     setAllyCount(allyCount + 1);
   };
   
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+  
+  const handleButtonClick = () => {
+    const newData = [...catchphrase, inputValue];
+    setCatchphrase(newData);
+    setInputValue('');
+  };
 
   return (
     <>
@@ -56,8 +70,8 @@ export default function Builder({ setWeapon, weapon, setArmor, armor, ally, setA
       </select>
 
       <h3>Catchphrase!</h3>
-      <input></input>
-      <button>Submit</button>
+      <input type='text' value={inputValue} onChange={handleInputChange} ></input>
+      <button onClick={handleButtonClick}>Submit</button>
     </>
   );
 }
