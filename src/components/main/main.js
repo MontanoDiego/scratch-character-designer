@@ -4,7 +4,6 @@ import './main.css';
 export default function Main() {
   return (
     <div>
-      <h1>This is main</h1>
     </div>
   );
 }
