@@ -4,14 +4,14 @@ import Preview from '../preview/preview.js';
 import './main.css';
 
 export default function Main() {
-  const [weapon, setWeapon] = useState('Weapons');
+  const [weapon, setWeapon] = useState('Weapon');
   return (
     <div className='main'>
       <section className='left'>
-        <Builder setWeapon={setWeapon} weapon={weapon}/>
+        <Builder setWeapon={setWeapon}/>
       </section>
       <section className='right'>
-        <Preview />
+        <Preview weapon={weapon} />
       </section>
     </div>
   );

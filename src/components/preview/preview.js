@@ -1,9 +1,10 @@
 import React from 'react';
+import './preview.css';
 
-export default function Preview() {
+export default function Preview(weapon) {
   return (
     <>
-      <h2>Previewer!</h2>
+      <img className='weapon' src={`${process.env.PUBLIC_URL}/images/${weapon.weapon}.png`} />
     </>
   );
 }
