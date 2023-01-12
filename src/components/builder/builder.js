@@ -2,7 +2,7 @@ import React from 'react';
 import './builder.css';
 
 
-export default function Builder({ setWeapon, weapon, setArmor, armor, ally, setAlly }) {
+export default function Builder({ setWeapon, weapon, setArmor, armor, ally, setAlly, catchphrase, setCatchphrase }) {
 
   // weapons selector options list (option name, then value)
   const weapons = ['Gargoyles Great Axe', 'Great Sword', 'Winged Scythe'];
@@ -54,6 +54,10 @@ export default function Builder({ setWeapon, weapon, setArmor, armor, ally, setA
             {allies[index]}</option>
         ))}
       </select>
+
+      <h3>Catchphrase!</h3>
+      <input></input>
+      <button>Submit</button>
     </>
   );
 }
