@@ -2,7 +2,7 @@ import React from 'react';
 import './builder.css';
 
 
-export default function Builder({ setWeapon, weapon, setArmor, armor, ally, setAlly, catchphrase, setCatchphrase }) {
+export default function Builder({ setWeapon, weapon, setArmor, armor, ally, setAlly, catchphrase, setCatchphrase, setWeaponCount, weaponCount }) {
 
   // weapons selector options list (option name, then value)
   const weapons = ['Gargoyles Great Axe', 'Great Sword', 'Winged Scythe'];
@@ -15,16 +15,14 @@ export default function Builder({ setWeapon, weapon, setArmor, armor, ally, setA
   const alliesValue = ['mimic', 'ancestor', 'jelly'];
   
   const handleWeaponSelect = (e) => {
-    let targetValue = e.target.value;
-    setWeapon(targetValue);
+    setWeapon(e.target.value);
+    setWeaponCount(weaponCount + 1);
   };
   const handleArmorSelect = (e) => {
-    let targetValue = e.target.value;
-    setArmor(targetValue);
+    setArmor(e.target.value);
   };
   const handleAllySelect = (e) => {
-    let targetValue = e.target.value;
-    setAlly(targetValue);
+    setAlly(e.target.value);
   };
   
 

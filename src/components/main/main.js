@@ -9,12 +9,27 @@ export default function Main() {
   const [armor, setArmor] = useState('Armor');
   const [ally, setAlly] = useState('Ally');
   const [catchphrase, setCatchphrase] = useState('Catchphrase');
+  const [weaponCount, setWeaponCount] = useState(0);
+  const [armorCount, setArmorCount] = useState(0);
+  const [allyCount, setAllyCount] = useState(0);
 
+  
   return (
     <div className='main'>
       <section className='left'>
-        <Builder setWeapon={setWeapon} setArmor={setArmor} setAlly={setAlly} />
-        <Stats />
+        <Builder 
+          setWeapon={setWeapon} 
+          setArmor={setArmor} 
+          setAlly={setAlly} 
+          setWeaponCount={setWeaponCount} 
+          weaponCount={weaponCount}
+          armorCount={armorCount}
+          setArmorCount={setArmorCount}
+          allyCount={allyCount}
+          setAllyCount={setAllyCount}
+        />
+
+        <Stats weaponCount={weaponCount} armorCount={armorCount} allyCount={allyCount} />
       </section>
       <section className='right'>
         <Preview weapon={weapon} armor={armor} ally={ally} />
