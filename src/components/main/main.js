@@ -5,13 +5,14 @@ import './main.css';
 
 export default function Main() {
   const [weapon, setWeapon] = useState('Weapon');
+  const [armor, setArmor] = useState('Armor');
   return (
     <div className='main'>
       <section className='left'>
-        <Builder setWeapon={setWeapon}/>
+        <Builder setWeapon={setWeapon} setArmor={setArmor}/>
       </section>
       <section className='right'>
-        <Preview weapon={weapon} />
+        <Preview weapon={weapon} armor={armor}/>
       </section>
     </div>
   );
