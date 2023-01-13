@@ -5,9 +5,9 @@ import Stats from '../stats/stats.js';
 import './main.css';
 
 export default function Main() {
-  const [weapon, setWeapon] = useState('Weapon');
-  const [armor, setArmor] = useState('Armor');
-  const [ally, setAlly] = useState('Ally');
+  const [weapon, setWeapon] = useState('greataxe');
+  const [armor, setArmor] = useState('night');
+  const [ally, setAlly] = useState('mimic');
   const [catchphrase, setCatchphrase] = useState('');
   const [weaponCount, setWeaponCount] = useState(0);
   const [armorCount, setArmorCount] = useState(0);

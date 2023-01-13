@@ -45,7 +45,7 @@ export default function Builder({ setWeapon, weapon, setArmor, armor, ally, setA
   return (
     <>
       <h2>Builder!</h2>
-      <h3>weapon!</h3>
+      <h3>Weapon!</h3>
       <select value={weapon} onChange={handleWeaponSelect}>
         {weaponsValue.map((value, index) => (
           <option key={index} value={value} >
@@ -53,7 +53,7 @@ export default function Builder({ setWeapon, weapon, setArmor, armor, ally, setA
         ))}
       </select>
       
-      <h3>armor!</h3>
+      <h3>Armor!</h3>
       <select value={armor} onChange={handleArmorSelect}>
         {armorsValue.map((value, index) => (
           <option key={index} value={value} >
@@ -61,7 +61,7 @@ export default function Builder({ setWeapon, weapon, setArmor, armor, ally, setA
         ))}
       </select>
       
-      <h3>ally!</h3>
+      <h3>Ally!</h3>
       <select value={ally} onChange={handleAllySelect}>
         {alliesValue.map((value, index) => (
           <option key={index} value={value} >
