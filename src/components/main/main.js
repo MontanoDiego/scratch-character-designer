@@ -15,7 +15,11 @@ export default function Main() {
 
   
   return (
-    <div className='main'>
+    <div className='main' style={{
+      background: `url(${process.env.PUBLIC_URL}/images/background.jpg)`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }}>
       <section className='left'>
         <Builder 
           setWeapon={setWeapon} 
