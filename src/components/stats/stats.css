@@ -1,0 +1,10 @@
+.list-container {
+    width: 200px;
+    height: 250px;
+    border: solid 2px;
+}
+
+.stat-list {
+    font-size: small;
+    font-weight: bold;
+}
